@@ -2,7 +2,7 @@
     <div class="ct-header">
         <div class="container">
             <img src="../img/dc-logo.png" alt="">
-            <div class='ct-link' v-for="{ title, id } in headerData" :key={id} >
+            <div class='ct-link' v-for="{ title, id , } in headerData" :key='id + title ' >
                  <a href="">{{title}}</a>
             </div>
            

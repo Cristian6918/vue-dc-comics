@@ -3,7 +3,7 @@
       <div class="container">
           <button class="sign-up-button">SIGN-UP NOW!</button>
           <a href="#" class="follow">FOLLOW US</a>
-          <a v-for="{name, url} in footerData" :key={name}><img :src='url' alt="name"></a>
+          <a v-for="({name, url} ) in footerData" :key='name'><img :src='url' :alt="name"></a>
 
       </div>
   </div>
@@ -46,6 +46,9 @@ export default {
             padding:0.6rem;
             font-size:1.3rem;
 
+            &:active{
+                box-shadow:0px 2px 5px 5px#0e5ca5;
+            }
 
         }
 

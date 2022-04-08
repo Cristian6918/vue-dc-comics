@@ -1,7 +1,7 @@
 <template>
     <div class="banner">
         <div class="container">
-            <div class="banner-card" v-for="{title,img,alt,id} in bannerData" :key={id}>
+            <div class="banner-card" v-for="{title,img,alt,id} in bannerData" :key='id+title+alt'>
                 <img :src="img" :alt="alt">
                 <a href="">{{title}}</a>
             </div>

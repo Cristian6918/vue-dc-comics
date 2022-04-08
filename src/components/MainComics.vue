@@ -36,7 +36,7 @@ export default {
     background-image: url('@/img/footer-bg.jpg');
     background-size:cover;
     background-repeat: no-repeat;
-    flex-grow:1;
+    height:35vh;
     
   
 

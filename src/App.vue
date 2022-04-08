@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <HeaderComics/>
-    <ComicsMain/>
-    <BannerComics/>
+    <ComicsMain :cardData="cardInfo"/>
+    <BannerComics />
     <MainComics/>
     <FooterComics/>
   </div>
@@ -14,6 +14,7 @@ import ComicsMain from './components/ComicsMain.vue'
 import BannerComics from './components/BannerComics.vue'
 import MainComics from './components/MainComics.vue'
 import FooterComics from '@/components/FooterComics.vue'
+import cardInfo from '@/data/dc-comics.json'
 
 export default {
   name: 'App',
@@ -23,8 +24,13 @@ export default {
     BannerComics,
     MainComics,
     FooterComics,
+  },
+  data(){
+    return{
+      cardInfo,
+    };
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -41,6 +47,6 @@ export default {
   color: #2c3e50;
   display:flex;
   flex-direction: column;
-  height:100vh;
+  
 }
 </style>
